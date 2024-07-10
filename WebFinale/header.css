@@ -1,0 +1,172 @@
+/* General styles */
+body, ul, h3 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header styles */
+header {
+    background: #FFFFFF;
+    width: 100%;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    width: 200px; /* Adjust size as needed */
+    height: 100px;
+    margin-right: 20px;
+    margin-left: 150px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.nav-links {
+    margin-left: 85px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links img {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+/* Footer styles */
+footer {
+    background: #FFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 200px; /* Adjust size as needed */
+    margin-right: 10px;
+    margin-left: 60px;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 5px;
+}
+
+.footer-section a {
+    display: block;
+}
+
+/* Subscription form styling */
+.footer-section form {
+    display: flex;
+}
+
+.footer-section input[type="email"] {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.footer-section button {
+    padding: 5px 10px;
+    background-color: #B9879F;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-section button:hover {
+    background-color: #A76D8B;
+}
+
+
+.footer-section .social-icons {
+    display: flex;
+    gap: 10px; /* Adjust the gap as needed */
+}
+
+
+/* Responsive styling adjustments can be added here */
+@media (max-width: 768px) {
+    header, footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-right, .footer-right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links, .nav-icons, .footer-section {
+        margin-bottom: 10px;
+    }
+
+    .footer-right {
+        flex-wrap: wrap;
+    }
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}

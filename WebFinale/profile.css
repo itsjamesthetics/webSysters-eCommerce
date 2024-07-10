@@ -1,0 +1,491 @@
+/* General styles */
+body,
+ul,
+h3 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #B9879F;
+}
+
+/* Header styles */
+header {
+    background: #FFFFFF;
+    width: 100%;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    width: 200px;
+    height: 100px;
+    margin-right: 20px;
+    margin-left: 150px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.nav-links {
+    margin-left: 85px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links img:hover {
+    transform: rotate(360deg);
+}
+
+
+/* Main */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    padding: 20px;
+}
+
+.account-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.account-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.account-info h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.account-info p {
+    margin: 0;
+    color: #666;
+    font-size: 18px;
+}
+
+.account-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.option {
+    width: 200px;
+    text-align: center;
+}
+
+.option img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.option h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.option p {
+    margin: 0;
+    color: #666;
+}
+
+
+/* Footer styles */
+footer {
+    margin-top: 50px;
+    background: #FFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 200px;
+    margin-right: 10px;
+    margin-left: 60px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+.footer-right {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-section h3:hover {
+    color: #B9879F;
+}
+
+.footer-section ul {
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 5px;
+}
+
+.footer-section a {
+    display: block;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-section a:hover {
+    color: #B9879F;
+}
+
+.footer-section form {
+    display: flex;
+}
+
+.footer-section input[type="email"] {
+    padding: 5px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.footer-section input[type="email"]:focus {
+    background-color: #f0f0f0;
+    border: 1px solid #B9879F;
+}
+
+.footer-section button {
+    padding: 5px 10px;
+    background-color: #B9879F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer-section button:hover {
+    background-color: #A76D8B;
+    transform: scale(1.1);
+}
+
+.footer-section .social-icons {
+    margin-left: 4px;
+    display: flex;
+    gap: 10px;
+}
+
+.footer-section .social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-section .social-icons img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+
+    header,
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-right,
+    .footer-right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links,
+    .nav-icons,
+    .footer-section {
+        margin-bottom: 10px;
+    }
+
+    .footer-right {
+        flex-wrap: wrap;
+    }
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Add this at the end of your CSS file */
+
+/* Enhanced input focus effect */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #B9879F;
+    box-shadow: 0 0 5px rgba(185, 135, 159, 0.5);
+}
+
+/* Button ripple effect */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0) 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform 0.5s, opacity 1s;
+}
+
+button:active::after {
+    transform: scale(0, 0);
+    opacity: 0.3;
+    transition: 0s;
+}
+
+/* Hover effect for images */
+img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced tooltip effect */
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::before,
+[data-tooltip]::after {
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 10;
+}
+
+[data-tooltip]::after {
+    content: '';
+    border: 5px solid transparent;
+    border-top-color: #333;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after {
+    opacity: 1;
+}
+
+/* Animated Account Options */
+.option {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.option:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ADTIONAL */
+#search-field {
+    width: 183px;
+    display: none;
+    position: relative;
+    top: 40px;
+    margin-top: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+/* User profile dropdown styles */
+.user-dropdown {
+    width: 150px;
+    display: none;
+    position: relative;
+    margin-top: 40px;
+    top: 50px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.user-dropdown a {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    padding: 10px;
+    color: #333;
+
+    text-decoration: none;
+}
+
+.user-dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+#search-container {
+    position: relative;
+}
+
+#search-button {
+    display: none;
+    position: relative;
+    margin-top: 50px;
+    padding: 5px 10px;
+    background-color: #B9879F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#search-button:hover {
+    background-color: #A76D8B;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+a, button, input {
+    outline: none; /* Removes default outline */
+    box-shadow: none; /* Removes default shadow */
+}
+
+a:focus, button:focus, input:focus {
+    outline: 3px solid #B9879F; /* Custom focus style */
+    box-shadow: 0 0 5px rgba(185, 135, 159, 0.5); /* Adds a glow effect */
+}
+
+@media (max-width: 768px) {
+    .nav-links, .footer-right, .account-options {
+        flex-direction: column;
+    }
+
+    .nav-links li, .footer-section, .option {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-logo, .footer-logo {
+        margin: 10px auto; /* Centers logo on smaller screens */
+    }
+}
+
+
+
+/*ADDTIONAL*/
