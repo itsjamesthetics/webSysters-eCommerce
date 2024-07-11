@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Section</title>
+    <link rel="stylesheet" href="sellerdashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-left">
+                <img src="assets/tops.png" alt="SysTrend Logo" class="header-logo">
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="homepage.html">HOME</a></li>
+                    <li><a href="sellerdashboard.html">PRODUCT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li id="search-container">
+                        <a href="#search" id="search-icon"><img src="assets/search.png" alt="Search" width="24"
+                                height="24"></a>
+                        <input type="text" id="search-field" placeholder="Search...">
+                        <button type="submit" id="search-button">Search</button>
+                    </li>
+                    <li><a href="checkout.html"><img src="assets/cart.png" alt="Cart" width="24" height="24"></a></li>
+                    <li>
+                        <a href="profile.html" id="user-icon"><img src="assets/user.png" alt="User Account" width="24"
+                                height="24"></a>
+                        <div class="user-dropdown" id="user-dropdown">
+                            <a href="profile.html">Profile</a>
+                            <a href="settings.html">Settings</a>
+                            <a href="login.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="icon-overview"></i> Overview</a></li>
+                    <li><a href="viewproduct.html"><i class="icon-products"></i> Products</a></li>
+                    <li><a href="#"><i class="icon-customer"></i> Customer</a></li>
+                    <li><a href="checkout.html"><i class="icon-orders"></i> Orders</a></li>
+                    <li><a href="sellproduct.html"><i class="icon-shipment"></i> Shipment</a></li>
+                    <li><a href="#"><i class="icon-settings"></i> Store Setting</a></li>
+                    <li><a href="#"><i class="icon-partner"></i> Platform Partner</a></li>
+                    <li><a href="#"><i class="icon-feedback"></i> Feedback</a></li>
+                    <li><a href="#"><i class="icon-support"></i> Help & Support</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="main-content">
+            <div class="overview">
+                <div class="sales-overview">
+                    <h2>Overall Sales</h2>
+                    <p class="sales-amount">₱238,560.93 <span class="sales-change">13.02%</span></p>
+                    <div class="chart">
+                        <!-- Placeholder for sales chart -->
+                    </div>
+                </div>
+                <div class="stats-cards">
+                    <div class="stats-card">
+                        <h3>Total Sales</h3>
+                        <p class="stats-value">₱108,560.93</p>
+                        <p class="stats-change">13.02% From May</p>
+                    </div>
+                    <div class="stats-card">
+                        <h3>Avg. Order Value</h3>
+                        <p class="stats-value">₱564.34</p>
+                        <p class="stats-change">3.02% From May</p>
+                    </div>
+                    <div class="stats-card">
+                        <h3>Online Sessions</h3>
+                        <p class="stats-value">130,234</p>
+                        <p class="stats-change">6.02% From May</p>
+                    </div>
+                    <div class="stats-card">
+                        <h3>Conversion Rate</h3>
+                        <p class="stats-value">86.34%</p>
+                        <p class="stats-change">0.32% From May</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="selling-products">
+                <h2>Selling Products</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Sold</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Marvel Thor Movie T-Shirt</td>
+                            <td>₱23</td>
+                            <td>53 pcs</td>
+                            <td>In Stock</td>
+                        </tr>
+                        <tr>
+                            <td>Aero Shorts Pants</td>
+                            <td>₱23</td>
+                            <td>53 pcs</td>
+                            <td>Out of Stock</td>
+                        </tr>
+                        <tr>
+                            <td>Erigo T-Shirts Green</td>
+                            <td>₱23</td>
+                            <td>53 pcs</td>
+                            <td>In Stock</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="announcements">
+                <h2>Announcements</h2>
+                <div id="announcements-container">
+                    <p>SysTrend Seller Communication Notification. Please be reminded that...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <img src="assets/round.png" alt="Mini Logo" class="footer-logo">
+        </div>
+        <div class="footer-right">
+            <div class="footer-section">
+                <h3>Downloads</h3>
+                <ul>
+                    <li><a href="#">Windows App</a></li>
+                    <li><a href="#">Desktop App</a></li>
+                    <li><a href="#">Mobile App</a></li>
+                    <li><a href="#">Mac App</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Clothes</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Socks</a></li>
+                    <li><a href="#">Underwear</a></li>
+                    <li><a href="#">Customized Wear</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Corp.</h3>
+                <ul>
+                    <li><a href="#">Terms And Conditions</a></li>
+                    <li><a href="#">Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Get In Touch</h3>
+                <div class="social-icons">
+                    <a href="#twitter"><img src="assets/twitter.png" alt="Twitter" width="24" height="24"></a>
+                    <a href="#instagram"><img src="assets/instagramdark.png" alt="Instagram" width="24" height="24"></a>
+                    <a href="#facebook"><img src="assets/facebook.png" alt="Facebook" width="24" height="24"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Subscribe</h3>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Enter email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2024 SysTrend, All Right Reserved.</p>
+    </div>
+    <script>
+        // Add ripple effect to buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function (e) {
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+                let ripple = document.createElement('span');
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                this.appendChild(ripple);
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Tooltip functionality
+        document.querySelectorAll('[data-tooltip]').forEach(element => {
+            element.addEventListener('mouseover', function () {
+                const tooltipText = this.getAttribute('data-tooltip');
+                const tooltip = document.createElement('div');
+                tooltip.className = 'tooltip';
+                tooltip.innerText = tooltipText;
+                document.body.appendChild(tooltip);
+                const rect = this.getBoundingClientRect();
+                tooltip.style.left = `${rect.left + rect.width / 2 - tooltip.offsetWidth / 2}px`;
+                tooltip.style.top = `${rect.top - tooltip.offsetHeight - 10}px`;
+                this.addEventListener('mouseout', () => {
+                    tooltip.remove();
+                });
+            });
+        });
+
+        // Load news into announcements
+        document.addEventListener('DOMContentLoaded', function () {
+            const announcementsContainer = document.getElementById('announcements-container');
+            const apiKey = '5a3cf1fb4b9f4aad956ce44391041f5e'; // Replace with your NewsAPI key
+            const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Clear any existing announcements
+                    announcementsContainer.innerHTML = '';
+
+                    // Loop through the news items and add them to the container
+                    data.articles.forEach(article => {
+                        const announcementItem = document.createElement('div');
+                        announcementItem.classList.add('announcement-item');
+
+                        announcementItem.innerHTML = `
+                            <h3>${article.title}</h3>
+                            <p>${article.description}</p>
+                        `;
+                        announcementsContainer.appendChild(announcementItem);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching news:', error);
+                    announcementsContainer.innerHTML = '<p>Failed to load announcements. Please try again later.</p>';
+                });
+        });
+
+        // Initialize Chart.js
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('salesChart').getContext('2d');
+            const salesChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                    datasets: [{
+                        label: 'Sales',
+                        data: [12000, 15000, 20000, 18000, 22000, 30000, 25000],
+                        borderColor: '#b9879f',
+                        backgroundColor: 'rgba(185, 135, 159, 0.2)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Months'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Sales (₱)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        });
+
+        //ADDED FUNCTION//
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ripple effect for buttons
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    let x = e.clientX - e.target.offsetLeft;
+                    let y = e.clientY - e.target.offsetTop;
+                    let ripple = document.createElement('span');
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    this.appendChild(ripple);
+
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            const searchIcon = document.querySelector('#search-icon');
+            const searchField = document.querySelector('#search-field');
+            const searchButton = document.querySelector('#search-button');
+            const userIcon = document.querySelector('#user-icon');
+            const userDropdown = document.querySelector('#user-dropdown');
+
+            // Function to recursively highlight text in nodes
+            function highlightText(node, query) {
+                if (node.nodeType === 3) { // Node.TEXT_NODE
+                    var text = node.data;
+                    var replacedText = text.replace(new RegExp(query, 'gi'), (match) => `<span class="highlight">${match}</span>`);
+                    var replacementNode = document.createElement('span');
+                    replacementNode.innerHTML = replacedText;
+                    node.parentNode.replaceChild(replacementNode, node);
+                } else if (node.nodeType === 1 && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') { // Node.ELEMENT_NODE
+                    for (var i = 0; i < node.childNodes.length; i++) {
+                        highlightText(node.childNodes[i], query);
+                    }
+                }
+            }
+
+            // Toggle Search Field and Button
+            searchIcon.addEventListener('click', (e) => {
+                e.preventDefault();
+                let isDisplayed = searchField.style.display === 'block';
+                searchField.style.display = isDisplayed ? 'none' : 'block';
+                searchButton.style.display = isDisplayed ? 'none' : 'block';
+            });
+
+            // Toggle User Dropdown
+            userIcon.addEventListener('click', (e) => {
+                e.preventDefault();
+                userDropdown.style.display = userDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Click outside to close dropdowns
+            document.addEventListener('click', (e) => {
+                if (!searchIcon.contains(e.target) && !searchField.contains(e.target) && !searchButton.contains(e.target)) {
+                    searchField.style.display = 'none';
+                    searchButton.style.display = 'none';
+                }
+                if (!userIcon.contains(e.target) && !userDropdown.contains(e.target)) {
+                    userDropdown.style.display = 'none';
+                }
+            });
+
+            // Search functionality
+            searchButton.addEventListener('click', () => {
+                const query = searchField.value.trim(); // Use trim to check for non-empty non-space strings
+                if (!query) {
+                    alert("Please enter a search term.");
+                    return; // Prevent further execution if input is empty
+                }
+
+                const content = document.querySelectorAll('.about-text, .team-member, .feature'); // Adjust as necessary
+                content.forEach(element => {
+                    highlightText(element, query);
+                });
+            });
+
+            // Clear highlights when user clears the search or searches for a new term
+            searchField.addEventListener('input', () => {
+                if (!searchField.value.trim()) {
+                    removeHighlights(); // Remove highlights if the field is cleared
+                }
+            });
+
+            // Function to remove highlights
+            function removeHighlights() {
+                const highlighted = document.querySelectorAll('.highlight');
+                highlighted.forEach((element) => {
+                    // Replace the highlighted element with its text content
+                    const parent = element.parentNode;
+                    if (parent) {
+                        parent.replaceChild(document.createTextNode(element.textContent), element);
+                    }
+                });
+            }
+        });
+        //ADDED FUNCTION
+    </script>
+</body>
+
+</html>

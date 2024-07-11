@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SysTrend Online Shop</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="login-container">
+        <header>
+            <img src="assets/tops.png" alt="SysTrend Logo" class="logo" id="logo-image">
+        </header>
+        <form class="login-form">
+            <input type="email" placeholder="Email Address" required id="email-input">
+            <input type="password" placeholder="Password" required id="password-input">
+            <a href="#forgot-password" class="forgot-password" id="forgot-password-link">Forgot Password?</a>
+            <button type="submit" class="login-button" id="login-button">LOGIN</button>
+            <button type="button" class="signup-button" id="signup-button">SIGN UP</button>
+        </form>
+        <div class="social-login">
+            <p>Or login with</p>
+            <button class="google-login" id="google-login-button" onclick="signIn()">
+                <img src="assets/google.png" alt="Google login" style="height: 24px;">
+            </button>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="assets/round.png" alt="SysTrend Logo"> <!-- Update your logo image path -->
+                </div>
+                <div class="footer-social">
+                    <p>Get In Touch</p>
+                    <a href="#twitter"><img src="assets/twitter.png" alt="Twitter"> </a>
+                    <a href="#instagram"><img src="assets/instagramdark.png" alt="Instagram"></a>
+                    <a href="#facebook"><img src="assets/facebook.png" alt="Facebook"></a>
+                </div>
+                <div class="footer-subscribe">
+                    <p>Subscribe</p>
+                    <form id="subscribeForm">
+                        <input type="email" id="emailInput" placeholder="Enter email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <div class="loading-spinner" style="display: none"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function (e) {
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+                let ripple = document.createElement('span');
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                this.appendChild(ripple);
+
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var signupButton = document.getElementById('signup-button');
+            signupButton.addEventListener('click', function () {
+                window.location.href = 'signup.html';
+            });
+        });
+
+
+        function showLoadingSpinner(show) {
+            const spinner = document.querySelector('.loading-spinner');
+            if (show) {
+                spinner.style.display = 'block';
+            } else {
+                spinner.style.display = 'none';
+            }
+        }
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function (e) {
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+                let ripple = document.createElement('span');
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                this.appendChild(ripple);
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
+
+        function signIn() {
+            gapi.load('auth2', function () {
+                var auth2 = gapi.auth2.init({
+                    client_id: 'Y464734950987-qsqnbm773eps6g1khcv7nlt0mceo8166.apps.googleusercontent.com', // Replace with your Client ID
+                    cookiepolicy: 'single_host_origin',
+                });
+                auth2.signIn().then(function (googleUser) {
+                    onSignIn(googleUser); // Handle the received user data
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const subscribeForm = document.getElementById('subscribeForm');
+            subscribeForm.addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent the default form submission
+                const emailInput = document.getElementById('emailInput');
+                const email = emailInput.value;
+
+                if (validateEmail(email)) {
+                    showLoadingSpinner(true); // Show a loading spinner or some loading text
+                    // Simulate an API call with setTimeout
+                    setTimeout(() => {
+                        showLoadingSpinner(false); // Hide the loading spinner
+                        alert('Subscription successful!');
+                        emailInput.value = ''; // Clear the input after successful subscription
+                    }, 2000);
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(String(email).toLowerCase());
+            }
+
+            function showLoadingSpinner(show) {
+                const spinner = document.querySelector('.loading-spinner');
+                spinner.style.display = show ? 'block' : 'none';
+            }
+        });
+    </script>
+</body>
+</html>

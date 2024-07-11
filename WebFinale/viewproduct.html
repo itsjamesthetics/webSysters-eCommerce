@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="viewproduct.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <center>
+            <nav>
+                <div class="nav-left">
+                    <img src="assets/tops.png" alt="SysTrend Logo" class="header-logo">
+                </div>
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="homepage.html">HOME</a></li>
+                        <li><a href="viewproduct.html">PRODUCT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li id="search-container">
+                            <a href="#search" id="search-icon"><img src="assets/search.png" alt="Search" width="24"
+                                    height="24"></a>
+                            <input type="text" id="search-field" placeholder="Search...">
+                            <button type="submit" id="search-button">Search</button>
+                        </li>
+                        <li><a href="checkout.html"><img src="assets/cart.png" alt="Cart" width="24" height="24"></a></li>
+                        <li>
+                            <a href="profile.html" id="user-icon"><img src="assets/user.png" alt="User Account" width="24"
+                                    height="24"></a>
+                            <div class="user-dropdown" id="user-dropdown">
+                                <a href="profile.html">Profile</a>
+                                <a href="settings.html">Settings</a>
+                                <a href="login.html">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    </header>
+    <!-- Main -->
+    <main>
+        <div class="product-container">
+            <h3>Selected Product</h3>
+            <h2>Browsed Category</h2>
+            <div class="product-content">
+                <button class="nav-arrow" id="prev-arrow">&lt;</button>
+                <div class="product-details">
+                    <div class="product-image">
+                        <img src="assets/placeholder.png" alt="Product Image">
+                        <p>Ferrari</p>
+                        <p>₱10,000,000.00</p>
+                        <div class="rating interactive">
+                            <span onclick="setRating(1)">★</span>
+                            <span onclick="setRating(2)">★</span>
+                            <span onclick="setRating(3)">★</span>
+                            <span onclick="setRating(4)">★</span>
+                            <span onclick="setRating(5)">★</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <p><strong>Brand:</strong> Ferrari 812 GTS</p>
+                        <p><strong>Price:</strong> ₱10,000,000.00</p>
+                        <p><strong>Description:</strong> Ferrari 812 GTS 2024 is a 2 Seater Convertibles. It is
+                            available in 1 variants, 1 engine, and 1 transmissions</p>
+                        <div class="quantity-container">
+                            <p><strong>Quantity:</strong></p>
+                            <div class="item-quantity">
+                                <button class="quantity-btn-plus">+</button>
+                                <span>1</span>
+                                <button class="quantity-btn-minus">-</button>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="action-btn add-to-cart">ADD TO CART</button>
+                            <button class="action-btn buy-now">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="nav-arrow" id="next-arrow">&gt;</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <img src="assets/round.png" alt="Mini Logo" class="footer-logo">
+        </div>
+        <div class="footer-right">
+            <div class="footer-section">
+                <h3>Downloads</h3>
+                <ul>
+                    <li><a href="#">Windows App</a></li>
+                    <li><a href="#">Desktop App</a></li>
+                    <li><a href="#">Mobile App</a></li>
+                    <li><a href="#">Mac App</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Clothes</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Socks</a></li>
+                    <li><a href="#">Underwear</a></li>
+                    <li><a href="#">Customized Wear</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Corp.</h3>
+                <ul>
+                    <li><a href="#">Terms And Conditions</a></li>
+                    <li><a href="#">Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Get In Touch</h3>
+                <div class="social-icons">
+                    <a href="#twitter"><img src="assets/twitter.png" alt="Twitter" width="24" height="24"></a>
+                    <a href="#instagram"><img src="assets/instagramdark.png" alt="Instagram" width="24" height="24"></a>
+                    <a href="#facebook"><img src="assets/facebook.png" alt="Facebook" width="24" height="24"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Subscribe</h3>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Enter email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2024 SysTrend, All Right Reserved.</p>
+    </div>
+
+    <script>
+
+        // JavaScript for increment and decrement buttons
+        document.querySelectorAll('.quantity-btn-plus').forEach(button => {
+            button.addEventListener('click', function () {
+                let quantityElement = this.nextElementSibling;
+                let quantity = parseInt(quantityElement.textContent, 10);
+                quantityElement.textContent = quantity + 1;
+                // Enable minus button if previously disabled
+                this.nextElementSibling.nextElementSibling.disabled = false;
+            });
+        });
+        document.querySelectorAll('.quantity-btn-minus').forEach(button => {
+            button.addEventListener('click', function () {
+                let quantityElement = this.previousElementSibling;
+                let quantity = parseInt(quantityElement.textContent, 10);
+                if (quantity > 1) {
+                    quantityElement.textContent = quantity - 1;
+                    if (quantity - 1 === 1) {
+                        this.disabled = true;
+                    }
+                }
+            });
+        });
+
+        // Initial disabling of minus buttons if quantity is 1
+        document.querySelectorAll('.item-quantity span').forEach(span => {
+            if (parseInt(span.textContent, 10) === 1) {
+                span.nextElementSibling.disabled = true;
+            }
+        });
+
+
+        // Confirmation messages for "Add to Cart" and "Buy Now"
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function () {
+                if (confirm('Are you sure you want to add this product to the cart?')) {
+                    alert('Product added to the cart.');
+                }
+            });
+        });
+
+        document.querySelectorAll('.buy-now').forEach(button => {
+            button.addEventListener('click', function () {
+                if (confirm('Are you sure you want to buy this product now?')) {
+                    alert('Proceeding to checkout.');
+                }
+            });
+        });
+
+        //ADDED FUNCTION//
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ripple effect for buttons
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    let x = e.clientX - e.target.offsetLeft;
+                    let y = e.clientY - e.target.offsetTop;
+                    let ripple = document.createElement('span');
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    this.appendChild(ripple);
+
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            const searchIcon = document.querySelector('#search-icon');
+            const searchField = document.querySelector('#search-field');
+            const searchButton = document.querySelector('#search-button');
+            const userIcon = document.querySelector('#user-icon');
+            const userDropdown = document.querySelector('#user-dropdown');
+
+            // Function to recursively highlight text in nodes
+            function highlightText(node, query) {
+                if (node.nodeType === 3) { // Node.TEXT_NODE
+                    var text = node.data;
+                    var replacedText = text.replace(new RegExp(query, 'gi'), (match) => `<span class="highlight">${match}</span>`);
+                    var replacementNode = document.createElement('span');
+                    replacementNode.innerHTML = replacedText;
+                    node.parentNode.replaceChild(replacementNode, node);
+                } else if (node.nodeType === 1 && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') { // Node.ELEMENT_NODE
+                    for (var i = 0; i < node.childNodes.length; i++) {
+                        highlightText(node.childNodes[i], query);
+                    }
+                }
+            }
+
+            // Toggle Search Field and Button
+            searchIcon.addEventListener('click', (e) => {
+                e.preventDefault();
+                let isDisplayed = searchField.style.display === 'block';
+                searchField.style.display = isDisplayed ? 'none' : 'block';
+                searchButton.style.display = isDisplayed ? 'none' : 'block';
+            });
+
+            // Toggle User Dropdown
+            userIcon.addEventListener('click', (e) => {
+                e.preventDefault();
+                userDropdown.style.display = userDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Click outside to close dropdowns
+            document.addEventListener('click', (e) => {
+                if (!searchIcon.contains(e.target) && !searchField.contains(e.target) && !searchButton.contains(e.target)) {
+                    searchField.style.display = 'none';
+                    searchButton.style.display = 'none';
+                }
+                if (!userIcon.contains(e.target) && !userDropdown.contains(e.target)) {
+                    userDropdown.style.display = 'none';
+                }
+            });
+
+            // Search functionality
+            searchButton.addEventListener('click', () => {
+                const query = searchField.value.trim(); // Use trim to check for non-empty non-space strings
+                if (!query) {
+                    alert("Please enter a search term.");
+                    return; // Prevent further execution if input is empty
+                }
+
+                const content = document.querySelectorAll('.about-text, .team-member, .feature'); // Adjust as necessary
+                content.forEach(element => {
+                    highlightText(element, query);
+                });
+            });
+
+            // Clear highlights when user clears the search or searches for a new term
+            searchField.addEventListener('input', () => {
+                if (!searchField.value.trim()) {
+                    removeHighlights(); // Remove highlights if the field is cleared
+                }
+            });
+
+            // Function to remove highlights
+            function removeHighlights() {
+                const highlighted = document.querySelectorAll('.highlight');
+                highlighted.forEach((element) => {
+                    // Replace the highlighted element with its text content
+                    const parent = element.parentNode;
+                    if (parent) {
+                        parent.replaceChild(document.createTextNode(element.textContent), element);
+                    }
+                });
+            }
+        });
+        //ADDED FUNCTION
+
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function setRating(rating) {
+            const stars = document.querySelectorAll('.rating.interactive span');
+            stars.forEach((star, index) => {
+                star.style.color = index < rating ? 'gold' : 'gray';
+            });
+        }
+    </script>
+</body>
+
+</html>

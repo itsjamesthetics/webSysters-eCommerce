@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Info</title>
+    <link rel="stylesheet" href="settings.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-left">
+                <img src="assets/tops.png" alt="SysTrend Logo" class="header-logo">
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="homepage.html">HOME</a></li>
+                    <li><a href="sellerdashboard.html">PRODUCT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li id="search-container">
+                        <a href="#search" id="search-icon"><img src="assets/search.png" alt="Search" width="24"
+                                height="24"></a>
+                        <input type="text" id="search-field" placeholder="Search...">
+                        <button type="submit" id="search-button">Search</button>
+                    </li>
+                    <li><a href="checkout.html"><img src="assets/cart.png" alt="Cart" width="24" height="24"></a></li>
+                    <li>
+                        <a href="profile.html" id="user-icon"><img src="assets/user.png" alt="User Account" width="24"
+                                height="24"></a>
+                        <div class="user-dropdown" id="user-dropdown">
+                            <a href="profile.html">Profile</a>
+                            <a href="settings.html">Settings</a>
+                            <a href="login.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="account-info-container">
+            <div class="account-info-header">
+                <p>Account > Account info</p>
+                <h1>Account info</h1>
+            </div>
+            <div class="account-info-content">
+                <div class="account-details">
+                    <div class="detail">
+                        <div class="detail-label">Legal name</div>
+                        <div class="detail-value" data-field="legal-name">Lois Griffin</div>
+                        <a href="#" class="edit-link" data-field="legal-name">Edit</a>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-label">Email address</div>
+                        <div class="detail-value" data-field="email">loisgriffin@su.edu.ph</div>
+                        <a href="#" class="edit-link" data-field="email">Edit</a>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-label">Phone numbers</div>
+                        <div class="detail-value" data-field="phone">Add a number so customers can get in touch. You can
+                            add other numbers and choose how they're used.</div>
+                        <a href="#" class="edit-link" data-field="phone">Add</a>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-label">Government ID</div>
+                        <div class="detail-value" data-field="government-id">Not provided</div>
+                        <a href="#" class="edit-link" data-field="government-id">Add</a>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-label">Address</div>
+                        <div class="detail-value" data-field="address">Not provided</div>
+                        <a href="#" class="edit-link" data-field="address">Edit</a>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-label">Emergency contact</div>
+                        <div class="detail-value" data-field="emergency-contact">Not provided</div>
+                        <a href="#" class="edit-link" data-field="emergency-contact">Add</a>
+                    </div>
+                </div>
+                <div class="profile-picture-section">
+                    <h2>Profile Picture</h2>
+                    <div class="profile-image-container">
+                        <img src="assets/user.png" alt="Profile Image" class="profile-image" id="profileImage">
+                        <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                    </div>
+                    <button id="updateButton">Update</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Edit Information</h2>
+            <form id="modal-form">
+                <label for="modal-input">New Value:</label>
+                <input type="text" id="modal-input" name="modal-input">
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <img src="assets/round.png" alt="Mini Logo" class="footer-logo">
+        </div>
+        <div class="footer-right">
+            <div class="footer-section">
+                <h3>Downloads</h3>
+                <ul>
+                    <li><a href="#">Windows App</a></li>
+                    <li><a href="#">Desktop App</a></li>
+                    <li><a href="#">Mobile App</a></li>
+                    <li><a href="#">Mac App</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Clothes</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Socks</a></li>
+                    <li><a href="#">Underwear</a></li>
+                    <li><a href="#">Customized Wear</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Corp.</h3>
+                <ul>
+                    <li><a href="#">Terms And Conditions</a></li>
+                    <li><a href="#">Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Get In Touch</h3>
+                <div class="social-icons">
+                    <a href="#twitter"><img src="assets/twitter.png" alt="Twitter" width="24" height="24"></a>
+                    <a href="#instagram"><img src="assets/instagramdark.png" alt="Instagram" width="24" height="24"></a>
+                    <a href="#facebook"><img src="assets/facebook.png" alt="Facebook" width="24" height="24"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Subscribe</h3>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Enter email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2024 SysTrend, All Right Reserved.</p>
+    </div>
+
+    <script>
+        // Profile image upload functionality
+        document.getElementById('profileImage').addEventListener('click', function () {
+            document.getElementById('fileInput').click();
+        });
+
+        document.getElementById('fileInput').addEventListener('change', function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById('profileImage').src = e.target.result;
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+
+        document.getElementById('updateButton').addEventListener('click', function () {
+            document.getElementById('fileInput').click();
+        });
+
+        // Ripple effect for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function (e) {
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+                let ripple = document.createElement('span');
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                this.appendChild(ripple);
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Tooltip functionality
+        document.querySelectorAll('[data-tooltip]').forEach(element => {
+            element.addEventListener('mouseover', function () {
+                const tooltipText = this.getAttribute('data-tooltip');
+                const tooltip = document.createElement('div');
+                tooltip.className = 'tooltip';
+                tooltip.innerText = tooltipText;
+                document.body.appendChild(tooltip);
+                const rect = this.getBoundingClientRect();
+                tooltip.style.left = `${rect.left + rect.width / 2 - tooltip.offsetWidth / 2}px`;
+                tooltip.style.top = `${rect.top - tooltip.offsetHeight - 10}px`;
+                this.addEventListener('mouseout', () => {
+                    tooltip.remove();
+                });
+            });
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('modal');
+        const closeModal = document.querySelector('.close');
+
+        document.querySelectorAll('.edit-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const field = this.dataset.field;
+                const currentValue = this.previousElementSibling.innerText;
+                document.getElementById('modal-input').value = currentValue;
+                document.getElementById('modal-input').dataset.field = field;
+                modal.style.display = 'block';
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        document.getElementById('modal-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const newValue = document.getElementById('modal-input').value;
+            const field = document.getElementById('modal-input').dataset.field;
+            document.querySelector(`.detail-value[data-field="${field}"]`).innerText = newValue;
+            modal.style.display = 'none';
+        });
+
+        //ADDED FUNCTION//
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ripple effect for buttons
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    let x = e.clientX - e.target.offsetLeft;
+                    let y = e.clientY - e.target.offsetTop;
+                    let ripple = document.createElement('span');
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    this.appendChild(ripple);
+
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            const searchIcon = document.querySelector('#search-icon');
+            const searchField = document.querySelector('#search-field');
+            const searchButton = document.querySelector('#search-button');
+            const userIcon = document.querySelector('#user-icon');
+            const userDropdown = document.querySelector('#user-dropdown');
+
+            // Function to recursively highlight text in nodes
+            function highlightText(node, query) {
+                if (node.nodeType === 3) { // Node.TEXT_NODE
+                    var text = node.data;
+                    var replacedText = text.replace(new RegExp(query, 'gi'), (match) => `<span class="highlight">${match}</span>`);
+                    var replacementNode = document.createElement('span');
+                    replacementNode.innerHTML = replacedText;
+                    node.parentNode.replaceChild(replacementNode, node);
+                } else if (node.nodeType === 1 && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') { // Node.ELEMENT_NODE
+                    for (var i = 0; i < node.childNodes.length; i++) {
+                        highlightText(node.childNodes[i], query);
+                    }
+                }
+            }
+
+            // Toggle Search Field and Button
+            searchIcon.addEventListener('click', (e) => {
+                e.preventDefault();
+                let isDisplayed = searchField.style.display === 'block';
+                searchField.style.display = isDisplayed ? 'none' : 'block';
+                searchButton.style.display = isDisplayed ? 'none' : 'block';
+            });
+
+            // Toggle User Dropdown
+            userIcon.addEventListener('click', (e) => {
+                e.preventDefault();
+                userDropdown.style.display = userDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Click outside to close dropdowns
+            document.addEventListener('click', (e) => {
+                if (!searchIcon.contains(e.target) && !searchField.contains(e.target) && !searchButton.contains(e.target)) {
+                    searchField.style.display = 'none';
+                    searchButton.style.display = 'none';
+                }
+                if (!userIcon.contains(e.target) && !userDropdown.contains(e.target)) {
+                    userDropdown.style.display = 'none';
+                }
+            });
+
+            // Search functionality
+            searchButton.addEventListener('click', () => {
+                const query = searchField.value.trim(); // Use trim to check for non-empty non-space strings
+                if (!query) {
+                    alert("Please enter a search term.");
+                    return; // Prevent further execution if input is empty
+                }
+
+                const content = document.querySelectorAll('.about-text, .team-member, .feature'); // Adjust as necessary
+                content.forEach(element => {
+                    highlightText(element, query);
+                });
+            });
+
+            // Clear highlights when user clears the search or searches for a new term
+            searchField.addEventListener('input', () => {
+                if (!searchField.value.trim()) {
+                    removeHighlights(); // Remove highlights if the field is cleared
+                }
+            });
+
+            // Function to remove highlights
+            function removeHighlights() {
+                const highlighted = document.querySelectorAll('.highlight');
+                highlighted.forEach((element) => {
+                    // Replace the highlighted element with its text content
+                    const parent = element.parentNode;
+                    if (parent) {
+                        parent.replaceChild(document.createTextNode(element.textContent), element);
+                    }
+                });
+            }
+        });
+        //ADDED FUNCTION
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('show');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+
+        document.querySelectorAll('.edit-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                modal.classList.add('show');
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

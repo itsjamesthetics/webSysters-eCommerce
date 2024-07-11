@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-left">
+                <img src="assets/tops.png" alt="SysTrend Logo" class="header-logo">
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="homepage.html">HOME</a></li>
+                    <li><a href="sellerdashboard.html">PRODUCT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li id="search-container">
+                        <a href="#search" id="search-icon"><img src="assets/search.png" alt="Search" width="24"
+                                height="24"></a>
+                        <input type="text" id="search-field" placeholder="Search...">
+                        <button type="submit" id="search-button">Search</button>
+                    </li>
+                    <li><a href="checkout.html"><img src="assets/cart.png" alt="Cart" width="24" height="24"></a></li>
+                    <li>
+                        <a href="profile.html" id="user-icon"><img src="assets/user.png" alt="User Account" width="24"
+                                height="24"></a>
+                        <div class="user-dropdown" id="user-dropdown">
+                            <a href="profile.html">Profile</a>
+                            <a href="settings.html">Settings</a>
+                            <a href="login.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="checkout-container">
+            <h2>CHECK OUT</h2>
+            <div class="delivery-address">
+                <h3>Delivery Address</h3>
+                <input type="text" placeholder="Address">
+                <input type="text" placeholder="Street">
+                <div class="address-details">
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="State">
+                    <input type="text" placeholder="Zip Code">
+                </div>
+                <input type="text" placeholder="Landmark">
+            </div>
+            <h3>Your Cart</h3>
+            <div class="cart-container">
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="assets/ferarri.PNG" alt="Product Image">
+                    </div>
+                    <div class="item-details">
+                        <p><strong>Brand:</strong> Ferrari</p>
+                        <p><strong>Product:</strong> Ferrari 812 GTS</p>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn-plus">+</button>
+                        <span>1</span>
+                        <button class="quantity-btn-minus">-</button>
+                    </div>
+                    <div class="item-price">
+                        <p><strong>₱10,000,000.00</strong></p>
+                    </div>
+                </div>
+                <div class="cart-total">
+                    <div class="price-details">
+                        <p><strong>Price:</strong> ₱10,000,000.00</p>
+                        <p><strong>VAT:</strong> ₱80,000.00</p>
+                        <p><strong>Delivery:</strong> ₱500,000.00</p>
+                    </div>
+                    <div class="total-price">
+                        <p><strong>₱10,580,000.00</strong></p>
+                        <button class="checkout-btn">CHECK OUT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <img src="assets/round.png" alt="Mini Logo" class="footer-logo">
+        </div>
+        <div class="footer-right">
+            <div class="footer-section">
+                <h3>Downloads</h3>
+                <ul>
+                    <li><a href="#">Windows App</a></li>
+                    <li><a href="#">Desktop App</a></li>
+                    <li><a href="#">Mobile App</a></li>
+                    <li><a href="#">Mac App</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Clothes</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Socks</a></li>
+                    <li><a href="#">Underwear</a></li>
+                    <li><a href="#">Customized Wear</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Corp.</h3>
+                <ul>
+                    <li><a href="#">Terms And Conditions</a></li>
+                    <li><a href="#">Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Get In Touch</h3>
+                <div class="social-icons">
+                    <a href="#twitter"><img src="assets/twitter.png" alt="Twitter" width="24" height="24"></a>
+                    <a href="#instagram"><img src="assets/instagramdark.png" alt="Instagram" width="24" height="24"></a>
+                    <a href="#facebook"><img src="assets/facebook.png" alt="Facebook" width="24" height="24"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Subscribe</h3>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Enter email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2024 SysTrend, All Right Reserved.</p>
+    </div>
+    <script>
+
+        // JavaScript for increment and decrement buttons
+        document.querySelectorAll('.quantity-btn-plus').forEach(button => {
+            button.addEventListener('click', function () {
+                let quantityElement = this.nextElementSibling;
+                let quantity = parseInt(quantityElement.textContent, 10);
+                quantityElement.textContent = quantity + 1;
+                // Enable minus button if previously disabled
+                this.nextElementSibling.nextElementSibling.disabled = false;
+            });
+        });
+
+        document.querySelectorAll('.quantity-btn-minus').forEach(button => {
+            button.addEventListener('click', function () {
+                let quantityElement = this.previousElementSibling;
+                let quantity = parseInt(quantityElement.textContent, 10);
+                if (quantity > 1) {
+                    quantityElement.textContent = quantity - 1;
+                    if (quantity - 1 === 1) {
+                        this.disabled = true;
+                    }
+                }
+            });
+        });
+
+        // Initial disabling of minus buttons if quantity is 1
+        document.querySelectorAll('.item-quantity span').forEach(span => {
+            if (parseInt(span.textContent, 10) === 1) {
+                span.nextElementSibling.disabled = true;
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Function to toggle display elements
+            function toggleDisplay(element) {
+                element.style.display = element.style.display === 'block' ? 'none' : 'block';
+            }
+
+            const searchIcon = document.getElementById('search-icon');
+            const searchField = document.getElementById('search-field');
+            const searchButton = document.getElementById('search-button');
+            const userIcon = document.getElementById('user-icon');
+            const userDropdown = document.getElementById('user-dropdown');
+
+            // Event listener for the search icon click
+            searchIcon.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleDisplay(searchField);
+                toggleDisplay(searchButton);
+            });
+
+            // Event listener for the user icon click
+            userIcon.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleDisplay(userDropdown);
+            });
+
+            // Global click listener to close dropdowns and search if clicked outside
+            document.addEventListener('click', (e) => {
+                if (!searchIcon.contains(e.target) && !searchField.contains(e.target) && !searchButton.contains(e.target)) {
+                    searchField.style.display = 'none';
+                    searchButton.style.display = 'none';
+                }
+                if (!userIcon.contains(e.target) && !userDropdown.contains(e.target)) {
+                    userDropdown.style.display = 'none';
+                }
+            });
+
+            // Search functionality with text highlighting
+            searchButton.addEventListener('click', () => {
+                const query = searchField.value.trim();
+                if (!query) {
+                    alert("Please enter a search term.");
+                    return;
+                }
+
+                // Function to recursively highlight text in nodes
+                function highlightText(content, query) {
+                    if (content) {
+                        const innerHTML = content.innerHTML;
+                        const regex = new RegExp(query, 'gi'); // Case insensitive
+                        const newHTML = innerHTML.replace(regex, (match) => `<span class="highlight">${match}</span>`);
+                        content.innerHTML = newHTML;
+                    }
+                }
+
+                const contents = document.querySelectorAll('.about-text, .team-member p, .feature p');
+                contents.forEach(content => highlightText(content, query));
+            });
+
+            // Function to remove highlights
+            function removeHighlights() {
+                const highlighted = document.querySelectorAll('.highlight');
+                highlighted.forEach((element) => {
+                    const parent = element.parentNode;
+                    if (parent) {
+                        parent.replaceChild(document.createTextNode(element.textContent), element);
+                    }
+                });
+            }
+
+            // Clear highlights when user modifies search input
+            searchField.addEventListener('input', () => {
+                if (!searchField.value.trim()) {
+                    removeHighlights();
+                }
+            });
+
+            // Checkout button functionality
+            const checkoutButton = document.querySelector('.checkout-btn');
+            checkoutButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                const inputs = document.querySelectorAll('.delivery-address input');
+                let allFilled = true;
+                inputs.forEach(input => {
+                    if (input.value.trim() === '') {
+                        input.style.borderColor = 'red'; // Highlight empty fields
+                        allFilled = false;
+                    } else {
+                        input.style.borderColor = 'initial'; // Reset border color
+                    }
+                });
+
+                if (allFilled) {
+                    alert('Proceeding to checkout.');
+                    inputs.forEach(input => input.value = ''); // Clear all inputs after successful checkout
+                } else {
+                    alert('Please fill in all required fields.');
+                }
+            });
+
+            // Ripple effect for button clicks
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    let ripple = document.createElement('span');
+                    ripple.classList.add('ripple');
+                    let rect = this.getBoundingClientRect();
+                    let x = e.clientX - rect.left;
+                    let y = e.clientY - rect.top;
+                    ripple.style.left = `${x}px`;
+                    ripple.style.top = `${y}px`;
+                    this.appendChild(ripple);
+
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

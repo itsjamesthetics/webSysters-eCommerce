@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sell Product </title>
+    <link rel="stylesheet" href="sellproduct.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-left">
+                <img src="assets/tops.png" alt="SysTrend Logo" class="header-logo">
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="homepage.html">HOME</a></li>
+                    <li><a href="sellerdashboard.html">PRODUCT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li id="search-container">
+                        <a href="#search" id="search-icon"><img src="assets/search.png" alt="Search" width="24"
+                                height="24"></a>
+                        <input type="text" id="search-field" placeholder="Search...">
+                        <button type="submit" id="search-button">Search</button>
+                    </li>
+                    <li><a href="checkout.html"><img src="assets/cart.png" alt="Cart" width="24" height="24"></a></li>
+                    <li>
+                        <a href="profile.html" id="user-icon"><img src="assets/user.png" alt="User Account" width="24"
+                                height="24"></a>
+                        <div class="user-dropdown" id="user-dropdown">
+                            <a href="profile.html">Profile</a>
+                            <a href="settings.html">Settings</a>
+                            <a href="login.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Main-->
+    <main>
+        <section class="sell-product">
+            <h2>Sell a Product</h2>
+            <div class="product-form">
+                <div class="product-image">
+                    <img id="productImagePreview" src="assets/product.png" alt="Product Image">
+                    <input type="file" id="productImage" accept="image/*" style="display: none;">
+                </div>
+                <div class="product-details">
+                    <div class="input-group">
+                        <label for="product-name">Product:</label>
+                        <input type="text" id="product-name" placeholder="Kang Kong Chips">
+                    </div>
+                    <div class="input-group">
+                        <label for="brand">Brand:</label>
+                        <input type="text" id="brand" placeholder="KCO">
+                    </div>
+                    <div class="input-group">
+                        <label for="description">Description:</label>
+                        <input type="text" id="description" placeholder="Masarap kahit walang sauce">
+                    </div>
+                    <div class="input-group">
+                        <label for="price">Price:</label>
+                        <input type="text" id="price" placeholder="$10,000.00">
+                    </div>
+                    <div class="input-group">
+                        <label for="category">Category:</label>
+                        <select id="category">
+                            <option>Flash Sales</option>
+                            <option>Best Selling Product</option>
+                            <option>Browsed Category</option>
+                            <option>Explore Products</option>
+                        </select>
+                    </div>
+                    <button class="add-product-btn" onclick="submitProductForm()">Add Product</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="ship-deliver">
+            <h2>To Ship and Deliver</h2>
+            <div class="delivery-info">
+                <div class="delivery-image">
+                    <img src="assets/product.png" alt="Product Image">
+                </div>
+                <div class="delivery-details">
+                    <p><strong>Product:</strong> <span>Kang Kong Chips</span></p>
+                    <p><strong>Brand:</strong> <span>KCO</span></p>
+                    <p><strong>Description:</strong> <span>Masarap Kahit Walang Sauce</span></p>
+                    <p><strong>Address:</strong> <span>Piapi, Amigo Subd St, NegOr, Dumaguete City, 6200, Church</span>
+                    </p>
+                    <p><strong>Customer:</strong> <span>Juan Dela Cruz</span></p>
+                    <p><strong>Email:</strong> <span>juandelacruz@gmail.com</span></p>
+                    <p><strong>Qty:</strong> <span>3</span></p>
+                    <p><strong>Total:</strong> <span>$30,000.00</span></p>
+                    <div class="action-buttons">
+                        <button id="cancel-btn" class="cancel-btn">Cancel</button>
+                        <button id="approve-btn" class="approve-btn">Approve</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <img src="assets/round.png" alt="Mini Logo" class="footer-logo">
+        </div>
+        <div class="footer-right">
+            <div class="footer-section">
+                <h3>Downloads</h3>
+                <ul>
+                    <li><a href="#">Windows App</a></li>
+                    <li><a href="#">Desktop App</a></li>
+                    <li><a href="#">Mobile App</a></li>
+                    <li><a href="#">Mac App</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Clothes</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Socks</a></li>
+                    <li><a href="#">Underwear</a></li>
+                    <li><a href="#">Customized Wear</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Corp.</h3>
+                <ul>
+                    <li><a href="#">Terms And Conditions</a></li>
+                    <li><a href="#">Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Get In Touch</h3>
+                <div class="social-icons">
+                    <a href="#twitter"><img src="assets/twitter.png" alt="Twitter" width="24" height="24"></a>
+                    <a href="#instagram"><img src="assets/instagramdark.png" alt="Instagram" width="24" height="24"></a>
+                    <a href="#facebook"><img src="assets/facebook.png" alt="Facebook" width="24" height="24"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Subscribe</h3>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Enter email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2024 SysTrend, All Right Reserved.</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to add ripple effects to buttons
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    let ripple = document.createElement('span');
+                    let x = e.clientX - e.target.offsetLeft;
+                    let y = e.clientY - e.target.offsetTop;
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    ripple.classList.add('ripple');
+                    this.appendChild(ripple);
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            // Image upload preview functionality
+            const productImage = document.getElementById('productImage');
+            const productImagePreview = document.getElementById('productImagePreview');
+            productImagePreview.addEventListener('click', () => productImage.click());
+            productImage.addEventListener('change', function () {
+                if (this.files && this.files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => productImagePreview.src = e.target.result;
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+
+            // Handle adding a product
+            const addButton = document.querySelector('.add-product-btn');
+            addButton.addEventListener('click', function (event) {
+                event.preventDefault();  // Prevent the form from submitting prematurely
+
+                const productName = document.getElementById('product-name').value.trim();
+                const brand = document.getElementById('brand').value.trim();
+                const description = document.getElementById('description').value.trim();
+                const price = document.getElementById('price').value.trim();
+                const category = document.getElementById('category').value;
+
+                let allFieldsFilled = true;
+
+                // Array of all input fields for easy iteration
+                const inputFields = [
+                    { value: productName, elementId: 'product-name' },
+                    { value: brand, elementId: 'brand' },
+                    { value: description, elementId: 'description' },
+                    { value: price, elementId: 'price' },
+                    // Category is a dropdown; assuming it always has a valid default value
+                ];
+
+                // Check each input field
+                inputFields.forEach(input => {
+                    if (!input.value) {
+                        document.getElementById(input.elementId).style.borderColor = 'red';
+                        allFieldsFilled = false;
+                    } else {
+                        document.getElementById(input.elementId).style.borderColor = ''; // reset to default or previous valid state
+                    }
+                });
+
+                if (allFieldsFilled) {
+                    alert('Product added successfully!');
+                    // Clear all input fields after successful submission
+                    inputFields.forEach(input => {
+                        document.getElementById(input.elementId).value = ''; // Reset each input field
+                    });
+                    document.getElementById('category').selectedIndex = 0; // Reset dropdown if needed
+                } else {
+                    alert('Please complete all fields.');
+                }
+            });
+
+            // Approve and Cancel button functionalities for shipping
+            document.getElementById('cancel-btn').addEventListener('click', () => {
+                if (confirm('Are you sure you want to cancel shipping?')) {
+                    alert('Order canceled.');
+                }
+            });
+
+            document.getElementById('approve-btn').addEventListener('click', () => {
+                if (confirm('Are you sure you want to approve shipping?')) {
+                    alert('Order approved.');
+                }
+            });
+        });
+
+        //ADDED FUNCTION//
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ripple effect for buttons
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    let x = e.clientX - e.target.offsetLeft;
+                    let y = e.clientY - e.target.offsetTop;
+                    let ripple = document.createElement('span');
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    this.appendChild(ripple);
+
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            const searchIcon = document.querySelector('#search-icon');
+            const searchField = document.querySelector('#search-field');
+            const searchButton = document.querySelector('#search-button');
+            const userIcon = document.querySelector('#user-icon');
+            const userDropdown = document.querySelector('#user-dropdown');
+
+            // Function to recursively highlight text in nodes
+            function highlightText(node, query) {
+                if (node.nodeType === 3) { // Node.TEXT_NODE
+                    var text = node.data;
+                    var replacedText = text.replace(new RegExp(query, 'gi'), (match) => `<span class="highlight">${match}</span>`);
+                    var replacementNode = document.createElement('span');
+                    replacementNode.innerHTML = replacedText;
+                    node.parentNode.replaceChild(replacementNode, node);
+                } else if (node.nodeType === 1 && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') { // Node.ELEMENT_NODE
+                    for (var i = 0; i < node.childNodes.length; i++) {
+                        highlightText(node.childNodes[i], query);
+                    }
+                }
+            }
+
+            // Toggle Search Field and Button
+            searchIcon.addEventListener('click', (e) => {
+                e.preventDefault();
+                let isDisplayed = searchField.style.display === 'block';
+                searchField.style.display = isDisplayed ? 'none' : 'block';
+                searchButton.style.display = isDisplayed ? 'none' : 'block';
+            });
+
+            // Toggle User Dropdown
+            userIcon.addEventListener('click', (e) => {
+                e.preventDefault();
+                userDropdown.style.display = userDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Click outside to close dropdowns
+            document.addEventListener('click', (e) => {
+                if (!searchIcon.contains(e.target) && !searchField.contains(e.target) && !searchButton.contains(e.target)) {
+                    searchField.style.display = 'none';
+                    searchButton.style.display = 'none';
+                }
+                if (!userIcon.contains(e.target) && !userDropdown.contains(e.target)) {
+                    userDropdown.style.display = 'none';
+                }
+            });
+
+            // Search functionality
+            searchButton.addEventListener('click', () => {
+                const query = searchField.value.trim(); // Use trim to check for non-empty non-space strings
+                if (!query) {
+                    alert("Please enter a search term.");
+                    return; // Prevent further execution if input is empty
+                }
+
+                const content = document.querySelectorAll('.about-text, .team-member, .feature'); // Adjust as necessary
+                content.forEach(element => {
+                    highlightText(element, query);
+                });
+            });
+
+            // Clear highlights when user clears the search or searches for a new term
+            searchField.addEventListener('input', () => {
+                if (!searchField.value.trim()) {
+                    removeHighlights(); // Remove highlights if the field is cleared
+                }
+            });
+
+            // Function to remove highlights
+            function removeHighlights() {
+                const highlighted = document.querySelectorAll('.highlight');
+                highlighted.forEach((element) => {
+                    // Replace the highlighted element with its text content
+                    const parent = element.parentNode;
+                    if (parent) {
+                        parent.replaceChild(document.createTextNode(element.textContent), element);
+                    }
+                });
+            }
+        });
+        //ADDED FUNCTION
+
+        window.addEventListener('scroll', () => {
+            const element = document.querySelector('.dynamic-effect');
+            const scrollPercent = document.documentElement.scrollTop / window.innerHeight;
+            element.style.transform = `scale(${1 + scrollPercent})`;
+        });
+
+        AOS.init({
+            duration: 1200,  // values from 0 to 3000, with step 50ms
+            once: true,      // whether animation should happen only once - while scrolling down
+        });
+
+
+    </script>
+
+</body>
+
+</html>
